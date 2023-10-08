@@ -5,23 +5,25 @@ function App() {
     <div className=" w-screen flex items-center justify-center p-2">
       <div className="flex flex-col gap-10 lg:gap-10 max-w-3xl ">
         <div className="">
-          <h1 className="underline text-[1.6rem]">FONT-PAIR</h1>
+          <h1 className="underline text-[1.6rem] font-['Space_Mono'] font-[700]">
+            FONT-PAIR
+          </h1>
         </div>
         <div className=" flex flex-col gap-8 lg:gap-6">
-          <div className="text-[1.8rem] text-center">
-            <div className=" p-4 py-2 bg-[#2F2F2F] text-white text-[1rem] w-max">
-              <p>comorant garamond</p>
+          <div className=" text-center">
+            <div className=" p-4 py-2 bg-[#2F2F2F] text-white text-[1rem] w-max  font-['Space_Mono'] italic">
+              <p>cormorant garamond</p>
             </div>
             <input
               value={"Font pairing made simple"}
-              className="bg-[#F1F5F9] p-2 lg:p-4 w-full"
+              className="bg-[#F1F5F9] p-2 lg:p-4 w-full font-['Cormorant_Garamond'] text-[2rem]"
             />
           </div>
           <div className="">
-            <div className=" p-4 py-2 bg-[#2F2F2F] text-white text-[1rem] w-max">
-              <p>comorant garamond</p>
+            <div className=" p-4 py-2 bg-[#2F2F2F] text-white text-[1rem] w-max font-['Space_Mono'] italic">
+              <p>proza libre</p>
             </div>
-            <div className="text-left flex flex-col gap-6 p-3 bg-[#F1F5F9] lg:p-6 ">
+            <div className="text-left flex flex-col gap-6 p-3 bg-[#F1F5F9] lg:p-6 font-['Proza_Libre']">
               <p>
                 Click (Generate) to create a new font pairing, (Lock) to lock
                 fonts that you want to keep, and (Edit) to choose a font
@@ -44,7 +46,7 @@ function App() {
               </p>
             </div>
           </div>
-          <button className="w-full p-4 bg-[#2F2F2F] text-white text-[1rem]">
+          <button className="w-full p-4 bg-[#2F2F2F] text-white text-[1rem] font-['Space_Mono']">
             generate
           </button>
         </div>
