@@ -17,7 +17,7 @@ function App() {
     { heading: "Eczar", body: "Gentium Plus" },
   ];
   return (
-    <div className=" w-screen min-h-screen flex items-center justify-center p-2 bg-[#F8F8F8]">
+    <div className=" w-screen min-h-screen flex items-center justify-center  bg-[#F8F8F8]">
       <div className="flex flex-col gap-10 lg:gap-10 max-w-xl ">
         <div className="flex items-center justify-between py-4">
           <h1 className="underline text-3xl lg:text-4xl font-['Space_Mono'] font-[700]">
