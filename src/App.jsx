@@ -2,49 +2,55 @@ import "./App.css";
 
 function App() {
   return (
-    <div className=" w-screen flex items-center justify-center p-2">
+    <div className=" w-screen flex items-center justify-center p-2 bg-[#F8F8F8]">
       <div className="flex flex-col gap-10 lg:gap-10 max-w-3xl ">
-        <div className="">
-          <h1 className="underline text-[1.6rem] font-['Space_Mono'] font-[700]">
+        <div className="flex items-center justify-between py-4">
+          <h1 className="underline text-[2.3rem] font-['Space_Mono'] font-[700]">
             FONT-PAIR
           </h1>
+          <div className=" flex items-center pr-4">
+            <div className="w-10 h-10 rounded-full bg-[#2F2F2F] relative left-9"></div>
+            <div className="w-6 h-6 rounded-full bg-[#F8F8F8] relative "></div>
+          </div>
         </div>
         <div className=" flex flex-col gap-8 lg:gap-6">
           <div className=" text-center">
             <div className=" p-4 py-2 bg-[#2F2F2F] text-white text-[1rem] w-max  font-['Space_Mono'] italic">
-              <p>cormorant garamond</p>
+              <p>libre franklin</p>
             </div>
-            <input
-              value={"Font pairing made simple"}
-              className="bg-[#F1F5F9] p-2 lg:p-4 w-full font-['Cormorant_Garamond'] text-[2rem]"
-            />
+
+            <h2
+              role="textarea"
+              className="resize w-full bg-[#F1F5F9] p-2 lg:p-4  font-['Libre_Franklin'] text-[1.8rem] text-left font-bold"
+              contentEditable
+            >
+              Font pairing made simple
+            </h2>
           </div>
           <div className="">
             <div className=" p-4 py-2 bg-[#2F2F2F] text-white text-[1rem] w-max font-['Space_Mono'] italic">
-              <p>proza libre</p>
+              <p>libre baskerville</p>
             </div>
-            <div className="text-left flex flex-col gap-6 p-3 bg-[#F1F5F9] lg:p-6 font-['Proza_Libre']">
-              <p>
-                Click (Generate) to create a new font pairing, (Lock) to lock
-                fonts that you want to keep, and (Edit) to choose a font
-                manually. The text is editable, try replacing it with your
+            <p className="text-left flex flex-col gap-6 p-3 bg-[#F1F5F9] lg:p-6 font-['Libre_Baskerville']">
+              {/* (Lock) to lock fonts that you want to keep, and (Edit) to choose a
+              font manually */}
+              <span role="textarea" className="resize w-full" contentEditable>
+                Click (Generate) to create a new font pairing. The text is
+                editable, and so is the heading, try replacing it with your
                 company name or other copy.
-              </p>
-              <p>
+              </span>
+
+              <span role="textarea" className="resize w-full" contentEditable>
+                All fonts are from fonts.google.com and the font names are a
+                link to their google font page so you can easily use them in
+                your web projects when you find a perfect pair.
+              </span>
+              {/* submit a font pair */}
+              <span role="textarea" className="resize w-full" contentEditable>
                 The goal of font pairing is to select fonts that share an
-                overarching theme yet have a pleasing contrast. Which fonts work
-                together is largely a matter of intuition, but we approach this
-                problem with a neural net. See Github for more technical
-                details.
-              </p>
-              <p>
-                The goal of font pairing is to select fonts that share an
-                overarching theme yet have a pleasing contrast. Which fonts work
-                together is largely a matter of intuition, but we approach this
-                problem with a neural net. See Github for more technical
-                details.
-              </p>
-            </div>
+                overarching theme yet have a pleasing contrast.
+              </span>
+            </p>
           </div>
           <button className="w-full p-4 bg-[#2F2F2F] text-white text-[1rem] font-['Space_Mono']">
             generate
