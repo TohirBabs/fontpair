@@ -14,13 +14,21 @@ function App() {
     { heading: "Libre Franklin", body: "Libre Baskerville" },
     { heading: "Trirong", body: "Rubik" },
     { heading: "Work Sans", body: "Taviraj" },
-    { heading: "Eczar", body: "Gentium Plus" },
+    { heading: "Grand Hotel", body: "Lato" },
+    { heading: "Space Mono", body: "Bitter" },
+    { heading: "Abril Fatface", body: "Poppins" },
+    { heading: "Fugaz One", body: "Work Sans" },
+    { heading: "Nunito", body: "Nunito Sans" },
+    { heading: "EB Garamond", body: "Spline Sans" },
+    { heading: "Zilla Slab", body: "Inter" },
+    { heading: "Oswald", body: "Source Serif Pro" },
+    { heading: "Arima Madurai", body: "Mulish" },
   ];
   return (
     <div className=" w-screen min-h-screen flex items-center justify-center  bg-[#F8F8F8]">
       <div className="flex flex-col gap-10 lg:gap-10 max-w-xl ">
-        <div className="flex items-center justify-between py-4">
-          <h1 className="underline text-3xl lg:text-4xl font-['Space_Mono'] font-[700]">
+        <div className="flex items-center justify-between py-4 px-3">
+          <h1 className="underline text-3xl lg:text-4xl font-['Space_Mono'] p-4 py-2 bg-[#2F2F2F] text-white ">
             FONT-PAIR
           </h1>
           <button className=" flex items-center pr-4">
