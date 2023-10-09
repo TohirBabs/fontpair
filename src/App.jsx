@@ -87,8 +87,8 @@ function App() {
                 The goal of font pairing is to select fonts that share an
                 overarching theme yet have a pleasing contrast. Click (Generate)
                 to create a new font pairing. The text is editable, and so is
-                the heading, try replacing it with your company name or other
-                copy.
+                the heading, try replacing it with whatever you like to see how
+                your text will look in this font
               </span>
 
               <span
