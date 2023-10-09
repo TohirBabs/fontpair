@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="dark w-screen min-h-screen flex items-center justify-center  bg-[#F8F8F8] dark:bg-[#111111]">
       <div className="flex flex-col min-h-screen gap-10 lg:gap-10 max-w-xl ">
-        <div className="flex items-center justify-between p-2 ">
+        <div className="flex items-center justify-between p-1 py-2">
           <h1 className="underline text-2xl lg:text-4xl font-['Space_Mono'] p-4 py-2 dark:text-white">
             FONT-PAIR
           </h1>
