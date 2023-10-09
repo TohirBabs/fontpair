@@ -13,6 +13,7 @@ function App() {
     { heading: "Cormorant Garamond", body: "Proza Libre" },
     { heading: "Libre Franklin", body: "Libre Baskerville" },
     { heading: "Trirong", body: "Rubik" },
+    { heading: "Work Sans", body: "Merriweather" },
     { heading: "Work Sans", body: "Taviraj" },
     { heading: "Grand Hotel", body: "Lato" },
     { heading: "Space Mono", body: "Bitter" },
@@ -22,7 +23,13 @@ function App() {
     { heading: "EB Garamond", body: "Spline Sans" },
     { heading: "Zilla Slab", body: "Inter" },
     { heading: "Oswald", body: "Source Serif Pro" },
+    { heading: "Karla", body: "Merriweather" },
+    { heading: "Barlow Condensed", body: "Montserrat" },
+    { heading: "Ultra", body: "PT Serif" },
     { heading: "Arima Madurai", body: "Mulish" },
+    { heading: "DM Serif Display", body: "DM Sans" },
+    { heading: "Karla", body: "Inconsolata" },
+    { heading: "Yeseva One", body: "Josefin Sans" },
   ];
   return (
     <div className="dark w-screen min-h-screen flex items-center justify-center  bg-[#F8F8F8] dark:bg-[#111111]">
