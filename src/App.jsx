@@ -25,15 +25,15 @@ function App() {
     { heading: "Arima Madurai", body: "Mulish" },
   ];
   return (
-    <div className=" w-screen min-h-screen flex items-center justify-center  bg-[#F8F8F8]">
+    <div className="dark w-screen min-h-screen flex items-center justify-center  bg-[#F8F8F8] dark:bg-[#111111]">
       <div className="flex flex-col min-h-screen gap-10 lg:gap-10 max-w-xl ">
-        <div className="flex items-center justify-between p-2 bg-[#2F2F2F] text-white">
-          <h1 className="underline text-2xl lg:text-4xl font-['Space_Mono'] p-4 py-2 ">
+        <div className="flex items-center justify-between p-2 ">
+          <h1 className="underline text-2xl lg:text-4xl font-['Space_Mono'] p-4 py-2 dark:text-white">
             FONT-PAIR
           </h1>
           <button className=" flex items-center pr-4">
-            <div className="w-9 h-9 rounded-full bg-[#F8F8F8]  relative left-8"></div>
-            <div className="w-6 h-6 rounded-full bg-[#2F2F2F]  relative "></div>
+            <div className="w-9 h-9 rounded-full bg-[#2F2F2F] dark:bg-[#F8F8F8] relative left-8"></div>
+            <div className="w-6 h-6 rounded-full  bg-[#F8F8F8] dark:bg-[#111111]  relative "></div>
           </button>
         </div>
         <div className=" flex flex-col gap-8 lg:gap-10">
@@ -42,7 +42,7 @@ function App() {
               href={`https://fonts.google.com/specimen/${fontPairs[
                 activepair
               ].heading.replaceAll(" ", "+")}`}
-              className=" p-4 py-2 bg-[#2F2F2F] text-white text-sm  w-max block  italic"
+              className=" p-4 py-2 bg-[#2F2F2F] text-white dark:bg-[#F8F8F8] dark:text-black text-sm  w-max block  italic"
             >
               <span className="font-['Space_Mono'] lowercase">
                 {fontPairs[activepair].heading}
@@ -54,7 +54,7 @@ function App() {
                 fontFamily: fontPairs[activepair].heading,
               }}
               role="textarea"
-              className="resize w-full bg-[#F1F5F9] p-2 lg:p-4  text-3xl lg:text-4xl text-left "
+              className="resize w-full bg-[#F1F5F9] dark:bg-[#2F2F2F] dark:text-white p-2 lg:p-4  text-3xl lg:text-4xl text-left "
               contentEditable
             >
               Font pairing made simple
@@ -65,7 +65,7 @@ function App() {
               href={`https://fonts.google.com/specimen/${fontPairs[
                 activepair
               ].body.replaceAll(" ", "+")}`}
-              className=" p-4 py-2 bg-[#2F2F2F] text-white  text-sm block w-max  italic"
+              className=" p-4 py-2 bg-[#2F2F2F] text-white dark:bg-[#F8F8F8] dark:text-black  text-sm block w-max  italic"
             >
               <span className="font-['Space_Mono'] lowercase">
                 {fontPairs[activepair].body}
@@ -75,13 +75,13 @@ function App() {
               style={{
                 fontFamily: fontPairs[activepair].body,
               }}
-              className="text-left lg:text-lg flex flex-col gap-6  bg-[#F1F5F9]  "
+              className="text-left lg:text-lg flex flex-col  bg-[#F1F5F9]  dark:bg-[#2F2F2F] dark:text-white"
             >
               {/* (Lock) to lock fonts that you want to keep, and (Edit) to choose a
               font manually */}
               <span
                 role="textarea"
-                className="resize w-full p-2 lg:p-6 "
+                className="resize w-full px-2 p-4 lg:px-6 lg:p-4 "
                 contentEditable
               >
                 The goal of font pairing is to select fonts that share an
@@ -93,7 +93,7 @@ function App() {
 
               <span
                 role="textarea"
-                className="resize w-full p-2 lg:p-6 "
+                className="resize w-full px-2 p-4  lg:px-6 lg:p-4"
                 contentEditable
               >
                 All fonts are from fonts.google.com and the font names are a
@@ -107,7 +107,7 @@ function App() {
             onClick={() =>
               setActivepair((active) => (active + 1) % fontPairs.length)
             }
-            className="w-full p-4 bg-[#2F2F2F] text-white text-[1rem] font-['Space_Mono']"
+            className="w-full p-4 bg-[#2F2F2F] dark:bg-[#F8F8F8] dark:text-black font-bold text-white lg:text-lg font-['Space_Mono']"
           >
             generate
           </button>
