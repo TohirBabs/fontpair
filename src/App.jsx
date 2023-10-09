@@ -5,7 +5,7 @@ function App() {
     <div className=" w-screen flex items-center justify-center p-2 bg-[#F8F8F8]">
       <div className="flex flex-col gap-10 lg:gap-10 max-w-xl ">
         <div className="flex items-center justify-between py-4">
-          <h1 className="underline text-4xl lg:text-5xl font-['Space_Mono'] font-[700]">
+          <h1 className="underline text-3xl lg:text-5xl font-['Space_Mono'] font-[700]">
             FONT-PAIR
           </h1>
           <div className=" flex items-center pr-4">
