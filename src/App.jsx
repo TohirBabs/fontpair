@@ -27,8 +27,8 @@ function App() {
   return (
     <div className=" w-screen min-h-screen flex items-center justify-center  bg-[#F8F8F8]">
       <div className="flex flex-col min-h-screen gap-10 lg:gap-10 max-w-xl ">
-        <div className="flex items-center justify-between py-4 px-3  bg-[#2F2F2F] text-white">
-          <h1 className="underline text-3xl lg:text-4xl font-['Space_Mono'] p-4 py-2 ">
+        <div className="flex items-center justify-between p-2 bg-[#2F2F2F] text-white">
+          <h1 className="underline text-2xl lg:text-4xl font-['Space_Mono'] p-4 py-2 ">
             FONT-PAIR
           </h1>
           <button className=" flex items-center pr-4">
