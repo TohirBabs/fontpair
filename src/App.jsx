@@ -23,16 +23,21 @@ function App() {
           <h1 className="underline text-3xl lg:text-4xl font-['Space_Mono'] font-[700]">
             FONT-PAIR
           </h1>
-          <div className=" flex items-center pr-4">
+          <button className=" flex items-center pr-4">
             <div className="w-9 h-9 rounded-full bg-[#2F2F2F] relative left-8"></div>
             <div className="w-6 h-6 rounded-full bg-[#F8F8F8] relative "></div>
-          </div>
+          </button>
         </div>
         <div className=" flex flex-col gap-8 lg:gap-10">
           <div className=" text-center">
-            <div className=" p-4 py-2 bg-[#2F2F2F] text-white text-sm  w-max  font-['Space_Mono'] italic">
-              <p className="lowercase">{fontPairs[activepair].heading}</p>
-            </div>
+            <a
+              href={`https://fonts.google.com/specimen/${fontPairs[
+                activepair
+              ].heading.replaceAll(" ", "+")}`}
+              className=" p-4 py-2 bg-[#2F2F2F] text-white text-sm  w-max block font-['Space_Mono'] italic"
+            >
+              <span className="lowercase">{fontPairs[activepair].heading}</span>
+            </a>
 
             <h2
               style={{
@@ -46,18 +51,27 @@ function App() {
             </h2>
           </div>
           <div className="">
-            <div className=" p-4 py-2 bg-[#2F2F2F] text-white  text-sm  w-max font-['Space_Mono'] italic">
-              <p className="lowercase">{fontPairs[activepair].body}</p>
-            </div>
+            <a
+              href={`https://fonts.google.com/specimen/${fontPairs[
+                activepair
+              ].body.replaceAll(" ", "+")}`}
+              className=" p-4 py-2 bg-[#2F2F2F] text-white  text-sm block w-max font-['Space_Mono'] italic"
+            >
+              <span className="lowercase">{fontPairs[activepair].body}</span>
+            </a>
             <p
               style={{
                 fontFamily: fontPairs[activepair].body,
               }}
-              className="text-left lg:text-lg flex flex-col gap-6 p-3 bg-[#F1F5F9] lg:p-6  "
+              className="text-left lg:text-lg flex flex-col gap-6  bg-[#F1F5F9]  "
             >
               {/* (Lock) to lock fonts that you want to keep, and (Edit) to choose a
               font manually */}
-              <span role="textarea" className="resize w-full" contentEditable>
+              <span
+                role="textarea"
+                className="resize w-full p-2 lg:p-6 "
+                contentEditable
+              >
                 The goal of font pairing is to select fonts that share an
                 overarching theme yet have a pleasing contrast. Click (Generate)
                 to create a new font pairing. The text is editable, and so is
@@ -65,7 +79,11 @@ function App() {
                 copy.
               </span>
 
-              <span role="textarea" className="resize w-full" contentEditable>
+              <span
+                role="textarea"
+                className="resize w-full p-2 lg:p-6 "
+                contentEditable
+              >
                 All fonts are from fonts.google.com and the font names are a
                 link to their google font page so you can easily use them in
                 your web projects when you find a perfect pair.
