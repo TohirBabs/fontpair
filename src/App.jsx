@@ -1,37 +1,60 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  //   Cormorant Garamond & Proza Libre
+  // Libre Franklin & Libre Baskerville
+  // Trirong & Rubik
+  // Work Sans & Taviraj
+  // Eczar & Gentium Plus
+  const [activepair, setActivepair] = useState(0);
+  console.log(activepair);
+  const fontPairs = [
+    { heading: "Cormorant Garamond", body: "Proza Libre" },
+    { heading: "Libre Franklin", body: "Libre Baskerville" },
+    { heading: "Trirong", body: "Rubik" },
+    { heading: "Work Sans", body: "Taviraj" },
+    { heading: "Eczar", body: "Gentium Plus" },
+  ];
   return (
-    <div className=" w-screen flex items-center justify-center p-2 bg-[#F8F8F8]">
+    <div className=" w-screen min-h-screen flex items-center justify-center p-2 bg-[#F8F8F8]">
       <div className="flex flex-col gap-10 lg:gap-10 max-w-xl ">
         <div className="flex items-center justify-between py-4">
-          <h1 className="underline text-3xl lg:text-5xl font-['Space_Mono'] font-[700]">
+          <h1 className="underline text-3xl lg:text-4xl font-['Space_Mono'] font-[700]">
             FONT-PAIR
           </h1>
           <div className=" flex items-center pr-4">
-            <div className="w-10 h-10 rounded-full bg-[#2F2F2F] relative left-9"></div>
+            <div className="w-9 h-9 rounded-full bg-[#2F2F2F] relative left-8"></div>
             <div className="w-6 h-6 rounded-full bg-[#F8F8F8] relative "></div>
           </div>
         </div>
-        <div className=" flex flex-col gap-8 lg:gap-12">
+        <div className=" flex flex-col gap-8 lg:gap-10">
           <div className=" text-center">
-            <div className=" p-4 py-2 bg-[#2F2F2F] text-white text-sm lg:text-lg w-max  font-['Space_Mono'] italic">
-              <p>libre franklin</p>
+            <div className=" p-4 py-2 bg-[#2F2F2F] text-white text-sm  w-max  font-['Space_Mono'] italic">
+              <p className="lowercase">{fontPairs[activepair].heading}</p>
             </div>
 
             <h2
+              style={{
+                fontFamily: fontPairs[activepair].heading,
+              }}
               role="textarea"
-              className="resize w-full bg-[#F1F5F9] p-2 lg:p-4  font-['Libre_Franklin'] text-2xl lg:text-4xl text-left font-bold"
+              className="resize w-full bg-[#F1F5F9] p-2 lg:p-4  text-3xl lg:text-4xl text-left "
               contentEditable
             >
               Font pairing made simple
             </h2>
           </div>
           <div className="">
-            <div className=" p-4 py-2 bg-[#2F2F2F] text-white  text-sm lg:text-lg w-max font-['Space_Mono'] italic">
-              <p>libre baskerville</p>
+            <div className=" p-4 py-2 bg-[#2F2F2F] text-white  text-sm  w-max font-['Space_Mono'] italic">
+              <p className="lowercase">{fontPairs[activepair].body}</p>
             </div>
-            <p className="text-left lg:text-lg flex flex-col gap-6 p-3 bg-[#F1F5F9] lg:p-6 font-['Libre_Baskerville']">
+            <p
+              style={{
+                fontFamily: fontPairs[activepair].body,
+              }}
+              className="text-left lg:text-lg flex flex-col gap-6 p-3 bg-[#F1F5F9] lg:p-6  "
+            >
               {/* (Lock) to lock fonts that you want to keep, and (Edit) to choose a
               font manually */}
               <span role="textarea" className="resize w-full" contentEditable>
@@ -50,7 +73,12 @@ function App() {
               {/* submit a font pair */}
             </p>
           </div>
-          <button className="w-full p-4 bg-[#2F2F2F] text-white text-[1rem] font-['Space_Mono']">
+          <button
+            onClick={() =>
+              setActivepair((active) => (active + 1) % fontPairs.length)
+            }
+            className="w-full p-4 bg-[#2F2F2F] text-white text-[1rem] font-['Space_Mono']"
+          >
             generate
           </button>
         </div>
