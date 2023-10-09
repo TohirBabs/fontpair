@@ -26,14 +26,14 @@ function App() {
   ];
   return (
     <div className=" w-screen min-h-screen flex items-center justify-center  bg-[#F8F8F8]">
-      <div className="flex flex-col gap-10 lg:gap-10 max-w-xl ">
-        <div className="flex items-center justify-between py-4 px-3">
-          <h1 className="underline text-3xl lg:text-4xl font-['Space_Mono'] p-4 py-2 bg-[#2F2F2F] text-white ">
+      <div className="flex flex-col min-h-screen gap-10 lg:gap-10 max-w-xl ">
+        <div className="flex items-center justify-between py-4 px-3  bg-[#2F2F2F] text-white">
+          <h1 className="underline text-3xl lg:text-4xl font-['Space_Mono'] p-4 py-2 ">
             FONT-PAIR
           </h1>
           <button className=" flex items-center pr-4">
-            <div className="w-9 h-9 rounded-full bg-[#2F2F2F] relative left-8"></div>
-            <div className="w-6 h-6 rounded-full bg-[#F8F8F8] relative "></div>
+            <div className="w-9 h-9 rounded-full bg-[#F8F8F8]  relative left-8"></div>
+            <div className="w-6 h-6 rounded-full bg-[#2F2F2F]  relative "></div>
           </button>
         </div>
         <div className=" flex flex-col gap-8 lg:gap-10">
@@ -42,9 +42,11 @@ function App() {
               href={`https://fonts.google.com/specimen/${fontPairs[
                 activepair
               ].heading.replaceAll(" ", "+")}`}
-              className=" p-4 py-2 bg-[#2F2F2F] text-white text-sm  w-max block font-['Space_Mono'] italic"
+              className=" p-4 py-2 bg-[#2F2F2F] text-white text-sm  w-max block  italic"
             >
-              <span className="lowercase">{fontPairs[activepair].heading}</span>
+              <span className="font-['Space_Mono'] lowercase">
+                {fontPairs[activepair].heading}
+              </span>
             </a>
 
             <h2
@@ -63,9 +65,11 @@ function App() {
               href={`https://fonts.google.com/specimen/${fontPairs[
                 activepair
               ].body.replaceAll(" ", "+")}`}
-              className=" p-4 py-2 bg-[#2F2F2F] text-white  text-sm block w-max font-['Space_Mono'] italic"
+              className=" p-4 py-2 bg-[#2F2F2F] text-white  text-sm block w-max  italic"
             >
-              <span className="lowercase">{fontPairs[activepair].body}</span>
+              <span className="font-['Space_Mono'] lowercase">
+                {fontPairs[activepair].body}
+              </span>
             </a>
             <p
               style={{
